@@ -15,10 +15,10 @@ export const GithubProvider = ({children}) => {
 
     const [state , dispatch] = useReducer(githubReducer , initialState) 
 
-    const fetchUsers = async () => {
+    const searchUsers = async () => {
         setLoading()
 
-        const response = await fetch(`${GITHUB_URL}/users`,{
+        const response = await fetch(`${GITHUB_URL}/search/users`,{
             headers:{
                 Authorization: `token ${GITHUB_TOKEN}`,
             },
