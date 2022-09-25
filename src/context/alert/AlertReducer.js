@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const AlertReducer = (state , action) => {
     switch (action.type) {
@@ -8,7 +8,7 @@ const AlertReducer = (state , action) => {
         case "REMOVE_ALERT":
             return null
         default:
-            state;
+           return state
     }
 }
 
