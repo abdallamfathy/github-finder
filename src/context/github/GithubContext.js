@@ -17,6 +17,7 @@ export const GithubProvider = ({children}) => {
 
     const searchUsers = async (text) => {
         setLoading()
+        clearUsers();
         
         const params = new URLSearchParams({
             q:text
@@ -36,7 +37,12 @@ export const GithubProvider = ({children}) => {
 
 
     //set loading
-    const setLoading = ()=> dispatch({type:"SET_LOADING "})
+    const setLoading = ()=> dispatch({type:"SET_LOADING"})
+
+    // Clear results
+    const clearUsers = () => dispatch({
+        type:"CLEAR_USERS",
+        })
 
 
 
@@ -45,6 +51,7 @@ export const GithubProvider = ({children}) => {
         users: state.users,
         loading: state.loading ,
         searchUsers,
+        clearUsers,
     }}>
         {children}
     </GithubContext.Provider>
