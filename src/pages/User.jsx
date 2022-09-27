@@ -165,7 +165,7 @@ const User = () => {
 
         </div>
 
-        <RepoList/>
+        <RepoList repos={repos}/>
       </div>
     </>
   )
