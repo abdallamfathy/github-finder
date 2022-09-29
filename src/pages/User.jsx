@@ -16,6 +16,7 @@ const User = () => {
     useEffect(() => {
     getUser(params.login)
     getRepos(params.login)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
      const {name,type,avatar_url,location,bio,blog,twitter_username,login,html_url,followers,following,public_repos,public_gists,hireable} = user;
@@ -39,10 +40,10 @@ const User = () => {
                 <img src={avatar_url} alt="img" />
               </figure>
               <div className="card-body justify-end ">
-                <h2 className="card-title mb-0 text-white">
+                <h2 className="card-title mb-0 text-gray-200">
                   {name}
                 </h2>
-                <p className='flex-grow-0 text-white'>
+                <p className='flex-grow-0 text-gray-200'>
                   {login}
                 </p>
               </div>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { FaGithub } from "react-icons/fa";
 function Navbar({title}) {
     return (
-    <nav className="navbar mb-12 shadow-lg bg-neutral text-white  ">
+    <nav className="navbar mb-12 shadow-lg bg-neutral   ">
     <div className='container mx-auto'>
         <div className="flex-none px-2 mx-2">
         <FaGithub className="inline text-3xl pr-2"/>
